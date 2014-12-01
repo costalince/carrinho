@@ -1,0 +1,111 @@
+<section class="clearfix" id="content">
+
+	<div id="cart">
+
+		<?php if($this->list): ?>
+
+		<div class="row">
+			<div class="span12">
+				<h1>Your Cart</h1>
+				<form id="cartform" method="post" action="/cart">
+					<table>
+						<thead>
+							<tr>
+								<th class="image">Product</th>
+								<th class="item">&nbsp;</th>
+								<th class="qty">Quantity</th>
+								<th class="price">Price</th>
+								<th class="remove">&nbsp;</th>
+							</tr>
+						</thead>
+						<tbody>
+
+							<?php foreach($this->list as $product):?>
+							<tr>
+								<td class="image">
+									<div class="product_image">
+										<a href="/products/index/id/<?php echo $product['id']; ?>">
+											<img alt="<?php echo $product['name']; ?>" src="//cdn.shopify.com/s/files/1/0710/9617/products/Tecnomobili-ArmC3A1rio-de-escritC3B3rio-ME4104-Branca-Tecnomobili-0302-215111-1-zoom_5969f510-6867-41d8-9903-5a785a250c45_small.jpg?v=1417273124">
+										</a>
+									</div>
+								</td>
+								<td class="item">
+									<a href="/products/index/id/<?php echo $product['id']; ?>">
+										<strong><?php echo $product['name']; ?></strong>
+
+									</a>
+								</td>
+								<td class="qty">
+									<input type="text" class="tc item-quantity" onfocus="this.select();" value="1" id="updates_994928845" name="updates[]" size="4">
+								</td>
+								<td class="price">R$ <?php echo number_format($product['price'], 2, ',', ' '); ?></td>
+								<td class="remove"><a class="cart" href="/cart/remove/id/<?php echo $product['id']; ?>">Remove</a></td>
+							</tr>
+						<? endforeach; ?>
+
+							<tr class="summary">
+								<td class="image">&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td class="price"><span class="total"><strong>R$ <?php echo number_format($this->total, 2, ',', ' '); ?></strong></span></td>
+								<td>&nbsp;</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<div class="span6 inner-left inner-right">
+						<div class="checkout-buttons clearfix">
+							<label for="note">Add special instructions for your order...</label>
+							<textarea cols="50" rows="10" name="note" id="note"></textarea>
+						</div>
+					</div>
+
+					<div class="span6 cart-buttons inner-right inner-left">
+						<div class="buttons clearfix">
+							<input type="submit" value="Check Out" name="checkout" class="btn" id="checkout">
+							<input type="submit" value="Update" name="update" class="btn" id="update-cart">
+						</div>
+					</div>
+
+				</form>
+			</div>
+		</div>
+
+		<!-- End cart -->
+
+	<?php else: ?>
+
+		<section class="clearfix" id="content">
+
+			<div id="cart">
+
+				<!-- Begin empty cart -->
+
+				<div class="row">
+					<div class="span12 expanded-message">
+						<br>
+						<br>
+						<h2 class="tc">Your cart is currently empty.</h2>
+					</div>
+				</div>
+				<!-- End empty cart -->
+
+				<!-- Begin cart -->
+
+
+
+				<!-- End cart -->
+
+			</div>
+
+
+
+		</section>
+
+	<?php endif; ?>
+
+	</div>
+
+
+
+</section>
