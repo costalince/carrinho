@@ -7,6 +7,11 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
     $autoloader->setFallbackAutoloader(true);
 
     $frontController = Zend_Controller_Front::getInstance();
+
+    $frontend = array('lifetime' => 300, 'automatic_serialization' => true);
+    $backend = array('cache_dir'=> APPLICATION_PATH.'/cache');
+    $cache = Zend_Cache::factory('Core', 'File', $frontend, $backend);
+    Zend_Registry::set('cache',$cache);
   }
 
   protected function _initConnection() {
@@ -25,7 +30,6 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
       $registry->set('db', $db);
 
     } catch (Zend_Exception $e) {
-      die($e);
       echo "Estamos com problemas em nossos servidores. Favor aguarde!";
     }
 
