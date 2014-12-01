@@ -11,7 +11,12 @@ class IndexController extends Zend_Controller_Action
     public function indexAction()
     {
         $product = new Application_Model_Product();
-        $this->view->products = $product->getAll();
+        
+        if(!$products = $product->getAllCache()){
+          $products = $product->getAll();
+        }
+
+        $this->view->products = $products;
     }
 
 

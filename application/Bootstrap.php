@@ -7,6 +7,7 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
     $autoloader->setFallbackAutoloader(true);
 
     $frontController = Zend_Controller_Front::getInstance();
+    $frontController->registerPlugin(new Shanty_Mongo());
 
     $frontend = array('lifetime' => 300, 'automatic_serialization' => true);
     $backend = array('cache_dir'=> APPLICATION_PATH.'/cache');
