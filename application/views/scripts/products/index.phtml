@@ -1,0 +1,81 @@
+<?php
+$product = $this->product[0];
+?>
+
+<div class="row clearfix">
+
+
+	<!-- Begin breadcrumb -->
+	<div class="span12">
+		<div class="breadcrumb clearfix">
+			<span itemtype="http://data-vocabulary.org/Breadcrumb" itemscope=""><a itemprop="url" title="Furniture" href="http://costalince.myshopify.com"><span itemprop="title">Home</span></a></span>
+			<span class="arrow-space">&gt;</span>
+			<span itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="">
+
+				<a title="Frontpage" href="/collections/frontpage">Frontpage</a>
+
+			</span>
+			<span class="arrow-space">&gt;</span>
+			<strong><?php echo $product['name']; ?></strong>
+		</div>
+	</div>
+	<!-- End breadcrumb -->
+
+
+	<!-- Begin product photos -->
+	<div class="span6">
+
+		<!-- Begin featured image -->
+		<div class="image featured">
+
+
+
+			<a id="placeholder" class="zoom" href="//cdn.shopify.com/s/files/1/0710/9617/products/Tecnomobili-ArmC3A1rio-de-escritC3B3rio-ME4104-Branca-Tecnomobili-0302-215111-1-zoom_5969f510-6867-41d8-9903-5a785a250c45_1024x1024.jpg?v=1417273124">
+				<img alt="Armário de escritório ME4104 Bege Tecnomobili" src="//cdn.shopify.com/s/files/1/0710/9617/products/Tecnomobili-ArmC3A1rio-de-escritC3B3rio-ME4104-Branca-Tecnomobili-0302-215111-1-zoom_5969f510-6867-41d8-9903-5a785a250c45_1024x1024.jpg?v=1417273124">
+			</a>
+
+
+		</div>
+		<!-- End product image -->
+
+
+
+	</div>
+	<!-- End product photos -->
+
+
+
+	<!-- Begin description -->
+	<div class="span6">
+
+		<h1 class="title"><?php echo $product['name']; ?></h1>
+
+		<div class="purchase">
+			<h2 id="price-preview" class="price">R$ <?php echo number_format($product['price'], 2, ',', ' '); ?></h2>
+		</div>
+
+		<form method="post" action="/cart/add">
+
+			<!-- Begin product options -->
+			<div class="product-options no-options ">
+
+				<div class="purchase-section">
+					<div class="purchase">
+
+						<input type="hidden" name="id" value="<?php echo $product['id']; ?>">
+						<input type="submit" value="Add to Cart" name="add" class="btn">
+
+					</div>
+				</div>
+			</div>
+			<!-- End product options -->
+
+		</form>
+
+		<div class="description">
+			<meta charset="utf-8"><?php echo $product['description']; ?>
+		</div>
+
+	</div>
+	<!-- End description -->
+</div>
