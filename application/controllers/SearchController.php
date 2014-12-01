@@ -1,6 +1,6 @@
 <?php
 
-class SearchController extends Zend_Controller_Action
+class SearchController extends MyLib_BaseController
 {
 
     public function init()
@@ -10,9 +10,13 @@ class SearchController extends Zend_Controller_Action
 
     public function indexAction()
     {
-        // action body
+      $q = $this->_getParam("q");
+
+      $product = new Application_Model_Product();
+      $this->view->products = $product->search($q);
+
+      $this->view->q = $q;
     }
 
 
 }
-

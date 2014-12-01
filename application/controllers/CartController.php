@@ -1,6 +1,6 @@
 <?php
 
-class CartController extends Zend_Controller_Action
+class CartController extends MyLib_BaseController
 {
 
     public function init()
@@ -14,7 +14,7 @@ class CartController extends Zend_Controller_Action
       $cart = $request->getCookie('cart');
 
       $cart = unserialize($cart);
-      
+
       if($cart):
         $products = new Application_Model_Product();
 

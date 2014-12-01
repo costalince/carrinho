@@ -15,6 +15,7 @@ try{
     $mongo->description = $product['description'];
     $mongo->price = $product['price'];
     $mongo->features = $product['features'];
+    $mongo->img = $product['img'];
     $mongo->save();
   }
 } catch(Exception $e){

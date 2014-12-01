@@ -1,4 +1,46 @@
-<br /><br />
-<div id="view-content">
-	<p>View script for controller <b>Search</b> and script/action name <b>index</b></p>
+<div id="search">
+
+	<?php if($this->products): ?>
+	<div class="row">
+		<div class="span12">
+			<h1>Search Results</h1>
+		</div>
+	</div>
+
+	<!-- Begin results -->
+	<?php foreach($this->products as $product): ?>
+	<div class="row results">
+		<div class="span1">
+			<div class="thumbnail">
+				<a href="/products/index/id/<?php echo $product['id']; ?>"><img alt="" src="<?php echo $product['img']; ?>"></a>
+			</div>
+		</div>
+		<div class="span11">
+			<div class="search-result">
+				<h3><a title="" href="/products/index/id/<?php echo $product['id']; ?>"><?php echo $product['name']; ?></a></h3>
+				<?php echo substr($product['description'], 0, 230) . '...'; ?>
+			</div>
+		</div>
+		<hr class="divider">
+	</div>
+	<?php endforeach; ?>
+
+	<!-- End results -->
+	<?php else: ?>
+
+	<div class="row">
+		<div class="span12 expanded-message">
+			<h2>No search results</h2>
+			<span class="subtext">Your search for <strong><?php echo $this->q; ?></strong> did not yield any results. Try searching for something else.</span>
+			<div class="search-field">
+				<form action="/search" class="search">
+					<input type="image" id="go" alt="Go" src="/assets/img/icon-search.png?5">
+					<input type="text" value="<?php echo $this->q; ?>" placeholder="search our store" class="search_box" name="q">
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<?php endif; ?>
+
 </div>

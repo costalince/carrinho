@@ -1,6 +1,6 @@
 <?php
 
-class ProductsController extends Zend_Controller_Action
+class ProductsController extends MyLib_BaseController
 {
 
     public function init()

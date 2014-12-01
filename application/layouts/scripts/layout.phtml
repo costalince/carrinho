@@ -16,22 +16,22 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="canonical" href="http://costalince.myshopify.com/" />
+  <link rel="canonical" href="http://carrinho-de-compas.local/" />
 
 
-  <link href="//cdn.shopify.com/s/files/1/0710/9617/t/1/assets/styles.scss.css?5" rel="stylesheet" type="text/css"  media="all"  />
+  <link href="/assets/css/styles.scss.css?5" rel="stylesheet" type="text/css"  media="all"  />
   <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Cabin:300,400,700">
-  <script src="//cdn.shopify.com/s/files/1/0710/9617/t/1/assets/html5shiv.js?5" type="text/javascript"></script>
+  <script src="/assets/js/html5shiv.js?5" type="text/javascript"></script>
 
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
-  <script src="//cdn.shopify.com/s/files/1/0710/9617/t/1/assets/jquery-migrate-1.2.0.min.js?5" type="text/javascript"></script>
+  <script src="/assets/js/jquery-migrate-1.2.0.min.js?5" type="text/javascript"></script>
 
-  <script src="//cdn.shopify.com/s/shopify/option_selection.js?96f59fd701c1ee18047ebc0ddd34014e81991510" type="text/javascript"></script>
-  <script src="//cdn.shopify.com/s/shopify/api.jquery.js?96f59fd701c1ee18047ebc0ddd34014e81991510" type="text/javascript"></script>
+  <script src="/assets/js/option_selection.js?96f59fd701c1ee18047ebc0ddd34014e81991510" type="text/javascript"></script>
+  <script src="/assets/js/api.jquery.js?96f59fd701c1ee18047ebc0ddd34014e81991510" type="text/javascript"></script>
 
 
-  <script src="//cdn.shopify.com/s/files/1/0710/9617/t/1/assets/scripts.js?5" type="text/javascript"></script>
+  <script src="/assets/js/scripts.js?5" type="text/javascript"></script>
 
 </head>
 
@@ -45,15 +45,15 @@
 
         <li class="search-field fl">
           <form class="search" action="/search">
-            <input type="image" src="//cdn.shopify.com/s/files/1/0710/9617/t/1/assets/icon-search.png?5" alt="Go" id="go">
+            <input type="image" src="/assets/img/icon-search.png?5" alt="Go" id="go">
             <input type="text" name="q" class="search_box" placeholder="Search" value=""  />
           </form>
         </li>
 
-        <li id="cart-target" class="toolbar-cart ">
+        <li id="cart-target" class="toolbar-cart  <?php if($this->total_cart):?>has-items<?php endif;?>">
           <a href="/cart" class="cart" title="Shopping Cart">
             <span class="icon-cart"></span>
-            <span id="cart-count">0</span>
+            <span id="cart-count"><?php echo $this->total_cart; ?></span>
             Cart
           </a>
         </li>
@@ -231,9 +231,9 @@
                 <!-- Begin copyright -->
                 <div class="span12 tc copyright">
                   <ul class="credit-cards p10 clearfix">
-                    <li><img src="//cdn.shopify.com/s/files/1/0710/9617/t/1/assets/icon-cc-visa.png?5" alt="Visa" /></li>
-                    <li><img src="//cdn.shopify.com/s/files/1/0710/9617/t/1/assets/icon-cc-mastercard.png?5" alt="MasterCard" /></li>
-                    <li><img src="//cdn.shopify.com/s/files/1/0710/9617/t/1/assets/icon-cc-amex.png?5" alt="Amex" /></li>
+                    <li><img src="/assets/img/icon-cc-visa.png?5" alt="Visa" /></li>
+                    <li><img src="/assets/img/icon-cc-mastercard.png?5" alt="MasterCard" /></li>
+                    <li><img src="/assets/img/icon-cc-amex.png?5" alt="Amex" /></li>
 
 
 
@@ -249,11 +249,11 @@
           </div>
           <!-- End footer -->
 
-          <script src="//cdn.shopify.com/s/files/1/0710/9617/t/1/assets/jquery.flexslider-min.js?5" type="text/javascript"></script>
+          <script src="/assets/js/jquery.flexslider-min.js?5" type="text/javascript"></script>
 
 
-          <script src="//cdn.shopify.com/s/files/1/0710/9617/t/1/assets/jquery.tweet.js?5" type="text/javascript"></script>
-          <script src="//cdn.shopify.com/s/files/1/0710/9617/t/1/assets/jquery.fancybox.js?5" type="text/javascript"></script>
+
+          <script src="/assets/js/jquery.fancybox.js?5" type="text/javascript"></script>
 
         </body>
         </html>

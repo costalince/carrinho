@@ -1,6 +1,6 @@
 <?php
 
-class IndexController extends Zend_Controller_Action
+class IndexController extends MyLib_BaseController
 {
 
     public function init()
@@ -11,7 +11,7 @@ class IndexController extends Zend_Controller_Action
     public function indexAction()
     {
         $product = new Application_Model_Product();
-        
+
         if(!$products = $product->getAllCache()){
           $products = $product->getAll();
         }
