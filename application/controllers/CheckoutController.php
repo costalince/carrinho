@@ -55,7 +55,7 @@ class CheckoutController extends Zend_Controller_Action
       $checkout_id = $checkout->insert($data);
       $encode = base64_encode($checkout_id);
 
-      setcookie('cart', '', 0, '/');
+      setcookie('cart', null, -1, '/');
 
       $this->_redirect('/checkout/thankyou/p/'.$encode);
     }

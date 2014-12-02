@@ -8,7 +8,7 @@ $product = $this->product[0];
 	<!-- Begin breadcrumb -->
 	<div class="span12">
 		<div class="breadcrumb clearfix">
-			<span itemtype="http://data-vocabulary.org/Breadcrumb" itemscope=""><a itemprop="url" title="Furniture" href="http://costalince.myshopify.com"><span itemprop="title">Home</span></a></span>
+			<span itemtype="http://data-vocabulary.org/Breadcrumb" itemscope=""><a itemprop="url" title="Furniture" href="/"><span itemprop="title">Home</span></a></span>
 			<span class="arrow-space">&gt;</span>
 			<span itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="">
 
@@ -30,8 +30,8 @@ $product = $this->product[0];
 
 
 
-			<a id="placeholder" class="zoom" href="//cdn.shopify.com/s/files/1/0710/9617/products/Tecnomobili-ArmC3A1rio-de-escritC3B3rio-ME4104-Branca-Tecnomobili-0302-215111-1-zoom_5969f510-6867-41d8-9903-5a785a250c45_1024x1024.jpg?v=1417273124">
-				<img alt="Armário de escritório ME4104 Bege Tecnomobili" src="//cdn.shopify.com/s/files/1/0710/9617/products/Tecnomobili-ArmC3A1rio-de-escritC3B3rio-ME4104-Branca-Tecnomobili-0302-215111-1-zoom_5969f510-6867-41d8-9903-5a785a250c45_1024x1024.jpg?v=1417273124">
+			<a id="placeholder" class="zoom" href="<?php echo $product['img']; ?>">
+				<img alt="<?php echo $product['name']; ?>" src="<?php echo $product['img']; ?>">
 			</a>
 
 
