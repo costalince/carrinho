@@ -7,7 +7,7 @@
 		<div class="row">
 			<div class="span12">
 				<h1>Your Cart</h1>
-				<form id="cartform" method="post" action="/cart">
+				<form id="cartform" method="post" action="/checkout">
 					<table>
 						<thead>
 							<tr>
@@ -32,7 +32,6 @@
 								<td class="item">
 									<a href="/products/index/id/<?php echo $product['id']; ?>">
 										<strong><?php echo $product['name']; ?></strong>
-
 									</a>
 								</td>
 								<td class="qty">
@@ -41,6 +40,7 @@
 								<td class="price">R$ <?php echo number_format($product['price'], 2, ',', ' '); ?></td>
 								<td class="remove"><a class="cart" href="/cart/remove/id/<?php echo $product['id']; ?>">Remove</a></td>
 							</tr>
+							<input type="hidden" name="id[]" value="<?php echo $product['id']; ?>">
 						<? endforeach; ?>
 
 							<tr class="summary">
@@ -63,7 +63,6 @@
 					<div class="span6 cart-buttons inner-right inner-left">
 						<div class="buttons clearfix">
 							<input type="submit" value="Check Out" name="checkout" class="btn" id="checkout">
-							<input type="submit" value="Update" name="update" class="btn" id="update-cart">
 						</div>
 					</div>
 

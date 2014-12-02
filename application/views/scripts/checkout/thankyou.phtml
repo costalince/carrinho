@@ -1,0 +1,84 @@
+<html class=" multi-step mac firefox desktop page--show js rgba multiplebgs boxshadow cssgradients csstransforms generatedcontent inlinesvg boxsizing" style=""><head>
+	<meta charset="utf-8">
+	<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width, initial-scale=1.0, height=device-height, minimum-scale=1.0, user-scalable=0" name="viewport">
+
+	<title>Furniture - Checkout</title>
+
+
+	<!--[if gt IE 9]><!-->
+	<link rel="stylesheet" media="all" href="/assets/css/checkout.css">
+	<!--<![endif]-->
+
+
+
+
+
+	<!--[if gte IE 8]><!-->
+	<script src="/assets/js/countries.js"></script>
+	<script src="/assets/js/multi_step_checkout.js"></script>
+	<!--<![endif]-->
+
+
+</head>
+<body>
+
+	<div class="header">
+		<div class="wrap">
+			<div class="shop">
+				<a href="/">
+					<h1 class="shop__name">Furniture</h1>
+
+				</a>
+			</div>
+		</div>
+		<i class="icon icon--lock"></i>
+		<div class="header__backdrop"></div>
+	</div>
+
+	<div class="main">
+
+
+
+
+		<div class="wrap">
+
+			<div class="section section--thank-you">
+				<div class="icon icon--order-success svg">
+					<svg xmlns="http://www.w3.org/2000/svg" width="72px" height="72px">
+						<g fill="none" stroke="#8EC343" stroke-width="2">
+							<circle cx="36" cy="36" r="35" style="stroke-dasharray:240px, 240px; stroke-dashoffset: 480px;"/>
+							<path d="M17.417,37.778l9.93,9.909l25.444-25.393" style="stroke-dasharray:50px, 50px; stroke-dashoffset: 0px;"/>
+						</g>
+					</svg>
+					<img alt="Check" src="//cdn.shopify.com/s/assets/checkout/icons/check-c8a47498ba32c8c43ec96f9f9bd714cb.png">
+				</div>
+
+				<h3>Thank you for your purchase!</h3>
+				<p>A confirmation email has been sent to <?php echo $this->order['email']; ?>
+					<strong>Order #<?php echo $this->order['id']; ?></strong></p>
+
+					<a class="btn" href="/">Continue Shopping</a>
+					<p data-shown-if-js=""><a data-trigger-print="" href="#"><i class="icon icon--print"></i>Print receipt</a></p>
+
+				</div>
+
+
+
+				<div class="section section--additional-mobile-cta">
+					<input type="submit" class="btn" id="additional-mobile-cta" name="commit" value="Continue">
+				</div>
+			</div>
+		</div>
+
+		<div class="footer">
+			<div class="wrap">
+				<p class="footer__copyright">
+					All rights reserved &copy; 2014
+					<a href="/">Furniture</a>
+				</p>
+			</div>
+		</div>
+
+</body>
+</html>
